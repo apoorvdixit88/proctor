@@ -30,26 +30,26 @@ form.addEventListener('submit', async (event) => {
       audio: true,
     };
     
-   window.navigator.mediaDevices.getUserMedia(constraints)
-      .then(stream => {
-        webcamFeed.srcObject = stream;
+  //  window.navigator.mediaDevices.getUserMedia(constraints)
+  //     .then(stream => {
+  //       webcamFeed.srcObject = stream;
         
-        // Send images to server every 3 minutes (configurable)
-        setInterval(() => {
-          const image = webcamFeed.captureImage();
-          sendImageToServer(image);
-        }, 3 * 60 * 1000);
-      })
-      .catch(error => {
-        console.error(error);
-      });
+  //       // Send images to server every 3 minutes (configurable)
+  //       setInterval(() => {
+  //         const image = webcamFeed.captureImage();
+  //         sendImageToServer(image);
+  //       }, 3 * 60 * 1000);
+  //     })
+  //     .catch(error => {
+  //       console.error(error);
+  //     });
   } catch (error) {
     console.error(error);
   }
 });
 
 function sendImageToServer(image) {
-  fetch('https://your-backend-server.com/proctoring/image', {
+  fetch('http://localhost:3001/api/userdata', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -80,25 +80,32 @@ window.navigator.mediaDevices.getUserMedia({ video: true, audio: false })
   };
     
     // Create a canvas element to capture an image
-    const canvas = document.createElement('canvas');
-    canvas.width = videoElement.videoWidth;
-    canvas.height = videoElement.videoHeight;
+    const canvas = document.getElementById('canvass');
+    // canvas.width = 100;
+    // canvas.height = 100;
+    // canvas.width = videoElement.videoWidth;
+    // canvas.height = videoElement.videoHeight;
+    // console.log(canvas.width,'wid',videoElement.videoHeight);
     const context = canvas.getContext('2d');
-    
+    console.log('canvas',canvas);
     // Function to capture an image and send it to the server
       const sendImage = () => {
-      context.drawImage(videoElement, 0, 0);
-      const imageData = canvas.toDataURL('image/jpeg');
-      
-      // Send the image to the server
-      const xhr = new XMLHttpRequest();
-      xhr.open('POST', 'https://example.com/save-image');
-      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-      xhr.send(`image=${encodeURIComponent(imageData)}`);
+      context.drawImage(videoElement, 0, 0,100,100);
+      const imageData = canvas.toDataURL();
+      console.log('img',imageData);
+      // Send the image to the server, 
+     // yaha pe local host pe send kara lete, waha se S3 pe bhej skte phir
+     console.log("img",imageData);
+      // const xhr = new XMLHttpRequest();
+      // xhr.open('POST', 'http://localhost:3001/api/userdata');
+      // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      // xhr.send(`image=${encodeURIComponent(imageData)}`);
+      sendImageToServer(imageData);
     };
     
     // Schedule the image proctoring
-    setInterval(sendImage, 3000);
+    sendImage();
+    // setInterval(sendImage, 3000);
   })
   .catch(error => {
     alert('cach')
