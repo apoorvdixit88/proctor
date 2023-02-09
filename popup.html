@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Proctoring Extension</title>
+  <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <form id="proctoring-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      
+      <label for="code">Test Invitation Code:</label>
+      <input type="text" id="code" required>
+      
+      <button type="submit">Start Test</button>
+    </form>
+    
+    <script src="options.js"></script>
+    <video id="webcam-feed"></video>
+
+      <!-- <script type="text/javascript">
+      //Selector for your <video> element
+      const video = document.querySelector('#webcam-feed');
+  
+      //Core
+      window.navigator.mediaDevices.getUserMedia({ video: true })
+          .then(stream => {
+              video.srcObject = stream;
+              video.onloadedmetadata = (e) => {
+                  video.play();
+              };
+          })
+          .catch( () => {
+              alert('You have give browser the permission to run Webcam and mic ;( ');
+          });
+  
+  </script> -->
+    
+    <script src="popup.js"></script>
+  </body>
+</html>

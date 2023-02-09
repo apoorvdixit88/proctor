@@ -1,0 +1,95 @@
+#user-form {
+    width: 500px;
+    margin:  auto;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: white;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  #message {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #4CAF50;
+  }
+  
+
+
+
+
+
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  label {
+    margin: 10px 0;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  #webcam-feed {
+    /* border: 2px solid black; */
+    margin-top: 20px;
+    width: 640px;
+    height: 480px;
+  }
+  
