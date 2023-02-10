@@ -62,6 +62,8 @@ $ npm start # run server for dash board
 
 https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html
 
+![](./assets/bucket.png)
+
 ## Creating MongoDB
 
 1. Create Mongo Cluster to store User's Data: [Link](https://www.mongodb.com/basics/clusters/mongodb-cluster-setup)
