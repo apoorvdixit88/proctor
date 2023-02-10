@@ -21,13 +21,6 @@ app.post("/api/userdata", async (req, res) => {
   const { name, email, code } = req.body;
   const user = new User({ name, email, code });
   await user.save();
-  // console.log(userData)
-  // const img = req.body.image;
-  // var base64Data = img.replace(/^data:image\/png;base64,/, "");
-  // console.log(base64Data);
-  // require("fs").writeFile("out.png", base64Data, 'base64', function(err) {
-  //   console.log(err);
-  // });
   res.send(user);
 });
 

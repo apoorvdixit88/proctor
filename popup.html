@@ -2,32 +2,26 @@
 <html>
   <head>
     <title>Proctoring Extension</title>
-  <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
     <form id="proctoring-form">
       <h1>Enter Details</h1>
       <label for="name">Name:</label>
-      <input type="text" id="name" required>
-      
+      <input type="text" id="name" required />
+
       <label for="email">Email:</label>
-      <input type="email" id="email" required>
-      
+      <input type="email" id="email" required />
+
       <label for="code">Test Invitation Code:</label>
-      <input type="text" id="code" required>
-      
+      <input type="text" id="code" required />
+
       <button type="submit" id="sub">Start Test</button>
     </form>
-    
+
     <script src="options.js"></script>
     <video id="webcam-feed"></video>
     <canvas id="canvas" width="320" height="240"></canvas>
-    
-   <!-- <body> -->
-    <!-- <h1>My Photo Albums App</h1>
-    <div id="app"></div> -->
-    
-  <!-- <script src="aws.js"></script> -->
     <script src="popup.js"></script>
   </body>
 </html>
