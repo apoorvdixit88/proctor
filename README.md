@@ -25,7 +25,7 @@ Clone the extesion using git:
 1. Make sure "**Developer mode**" is enabled.
 1. Click "**Load unpacked extension**" button, browse the `proctor/dist` directory and select it.
 
-![](./assets/dev-guide.png)
+![](./assets/dev-guide.PNG)
 
 <br>
 
@@ -62,13 +62,13 @@ $ npm start # run server for dash board
 
 https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html
 
-![](./assets/bucket.png)
+![](./assets/bucket.PNG)
 
 ## Creating MongoDB
 
 1. Create Mongo Cluster to store User's Data: [Link](https://www.mongodb.com/basics/clusters/mongodb-cluster-setup)
 
-![](./assets/dev-guide.png)
+![](./assets/dev-guide.PNG)
 
 ## Creating env variable
 
