@@ -62,6 +62,13 @@ $ npm start # run server for dash board
 ## Creating env variable
 Create the following variables in ENV
 
+AWS_BUCKET_NAME = ""
+AWS_BUCKET_REGION = "" 
+AWS_ACCESS_KEY = ""
+AWS_SECRET_KEY = ""
+
+MONGO_URL="mongodb+srv://apoorv:apoorv@extension.d43eedq.mongodb.net/?retryWrites=true&w=majority"
+
 
 
 
