@@ -1,32 +1,24 @@
 {
-    "manifest_version": 3,
-    "name": "Proctoring Extension",
-    "version": "1.0",
-    "description": "A chrome extension for proctoring tests",
-    "permissions": [
-      "tabs",
-      "webNavigation",
-      "videoCapture"
-
-      
-    ],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": [
-          "https://assessment-website.com/*"
-        ],
-        "js": [
-          "content-script.js"
-        ],
-        "run_at": "document_end"
-      }
-    ],
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "options_page": "options.html"
-  }
-  
+  "manifest_version": 3,
+  "name": "Proctoring Extension",
+  "version": "1.0",
+  "description": "A chrome extension for proctoring tests",
+  "permissions": ["tabs", "webNavigation", "videoCapture"],
+  "icons": {
+    "128": "logo.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://assessment-website.com/*"],
+      "js": ["content-script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html"
+}

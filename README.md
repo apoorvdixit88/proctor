@@ -2,8 +2,11 @@
 
 #Readme is in progress, more elaborated readme will be added by 7pm today
 
-#  Overview!
-Chrome Extension for Proctoring!
+# Overview!
+
+A Chrome extension that operates on assessment websites, activating when a user opens a test page. It opens a form for the user to enter their name, email, and test invitation code, and upon clicking the "Start Test" button, the user's information is sent to the backend server for storage. The extension performs a camera and audio check, and initiates image proctoring, sending images to the server every three minutes (configurable). All image and user activity data are stored on the backend server.
+
+An admin panel is provided to view user details (Along with images at particular timestamp).
 
 </p>
 
@@ -12,8 +15,9 @@ Chrome Extension for Proctoring!
 </p>
 
 ## Clone to Local Storage
+
 Clone the extesion using git:
-```bash $ git clone "repo URL" ```
+`bash $ git clone "repo URL" `
 
 ## Install Locally
 
@@ -26,8 +30,11 @@ Clone the extesion using git:
 <br>
 
 ## Run Locally
+
 Open two terminals for backend and admin(frontend) dashboard
+
 - For backend:
+
 ```bash
 $ cd backend # moving to directory
 
@@ -35,7 +42,9 @@ $ npm i # install dependencies
 
 $ nodemon app.js #run server for backend
 ```
-- For Frontend   Admin-Dashboard
+
+- For Frontend Admin-Dashboard
+
 ```bash
 $ cd admin # moving to directory
 
@@ -43,10 +52,8 @@ $ npm i # install dependencies
 
 $ npm start # run server for dash board
 ```
+
 <br>
-
-
-
 
 ## Creating S3 Bucket
 
@@ -55,21 +62,19 @@ $ npm start # run server for dash board
 
 https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html
 
-## Creating MongoDB 
+## Creating MongoDB
 
 1. Create Mongo Cluster to store User's Data: [Link](https://www.mongodb.com/basics/clusters/mongodb-cluster-setup)
 
 ![](./assets/dev-guide.png)
 
 ## Creating env variable
+
 Create the following variables in ENV
 
 AWS_BUCKET_NAME = ""
-AWS_BUCKET_REGION = "" 
+AWS_BUCKET_REGION = ""
 AWS_ACCESS_KEY = ""
 AWS_SECRET_KEY = ""
 
 MONGO_URL=""
-
-
-

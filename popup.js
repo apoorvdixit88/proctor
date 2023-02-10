@@ -4,6 +4,8 @@ const webcamFeed = document.querySelector("#webcam-feed");
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
+  alert("Proctoring Started!");
+
   const name = document.querySelector("#name").value;
   const email = document.querySelector("#email").value;
   const code = document.querySelector("#code").value;
