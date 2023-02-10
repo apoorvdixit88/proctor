@@ -52,6 +52,7 @@ $ npm start # run server for dash board
 1. Setup cloud bucket to store/retrieve photos: [Link](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html)
 2. Create Access Key and Security Key!
 
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html
 
 ## Creating MongoDB 
 
@@ -67,9 +68,7 @@ AWS_BUCKET_REGION = ""
 AWS_ACCESS_KEY = ""
 AWS_SECRET_KEY = ""
 
-MONGO_URL="mongodb+srv://apoorv:apoorv@extension.d43eedq.mongodb.net/?retryWrites=true&w=majority"
+MONGO_URL=""
 
 
 
-
-https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html
