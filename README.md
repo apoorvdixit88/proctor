@@ -11,27 +11,30 @@ An admin panel is provided to view user details (Along with images at particular
 </p>
 
 <p align="center">
-  <img width="200px" src="./assets/logo.png" alt="Recorder" />
+  <img width="200px" src="logo.png" alt="Recorder" />
 </p>
 
 ## Clone to Local Storage
 
 Clone the extesion using git:
-`bash $ git clone "repo URL" `
+`bash $ git clone "https://github.com/apoorvdixit88/proctor"`
 
 ## Install Locally
 
 1. Open chrome and navigate to extensions page using this URL: [`chrome://extensions`](chrome://extensions).
 1. Make sure "**Developer mode**" is enabled.
-1. Click "**Load unpacked extension**" button, browse the `proctor/dist` directory and select it.
+1. Click "**Load unpacked extension**" button, browse the `path/proctor` directory and select it.
 
 ![](./assets/dev-guide.PNG)
+
+Click the extension that gets appeared on top right corner.
+![](./assets/form.PNG)
 
 <br>
 
 ## Run Locally
 
-Open two terminals for backend and admin(frontend) dashboard
+Open two terminals for backend and admin dashboard(frontend)
 
 - For backend:
 
@@ -53,30 +56,40 @@ $ npm i # install dependencies
 $ npm start # run server for dash board
 ```
 
+![](./assets/dashboard.PNG)
+
+We can use seach email feauture to fetch images of a particular user clicked during proctoring session.
+![](./assets/dashboard_img.PNG)
+
+<!-- dashboard_img.PNG -->
+
 <br>
 
 ## Creating S3 Bucket
 
 1. Setup cloud bucket to store/retrieve photos: [Link](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html)
-2. Create Access Key and Security Key!
+2. Create Access Key and Security Key for the bucket. This can be done after bucket being creater(by changing permissions for a user) or during time of user creation. ([Refer](https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/))
 
-https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html
+[For aws reference](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html)
 
+The created bucked will look like!
 ![](./assets/bucket.PNG)
 
 ## Creating MongoDB
 
-1. Create Mongo Cluster to store User's Data: [Link](https://www.mongodb.com/basics/clusters/mongodb-cluster-setup)
+MongoDB will store form data as well all the reference links of all images of a particular user.
+Create Mongo Cluster to store User's Data: [Link](https://www.mongodb.com/basics/clusters/mongodb-cluster-setup)
 
-![](./assets/dev-guide.PNG)
+![](./assets/mongo.PNG)
 
 ## Creating env variable
 
-Create the following variables in ENV
+Enter the following variables in ENV after creating bucket and mongo cluster. (In .env file present in backend)
 
-AWS_BUCKET_NAME = ""
-AWS_BUCKET_REGION = ""
-AWS_ACCESS_KEY = ""
-AWS_SECRET_KEY = ""
+AWS_BUCKET_NAME = "" <br>
+AWS_BUCKET_REGION = "" <br>
+AWS_ACCESS_KEY = ""<br>
+AWS_SECRET_KEY = ""<br>
+MONGO_URL = ""<br>
 
-MONGO_URL=""
+The extension will work file once clicked, after specifying storage location all the data can be pushed or retrieved easily.
