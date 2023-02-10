@@ -1,12 +1,10 @@
 # Proctoring Extension
 
-#Readme is in progress, more elaborated readme will be added by 7pm today
-
 # Overview!
 
 A Chrome extension that operates on assessment websites, activating when a user opens a test page. It opens a form for the user to enter their name, email, and test invitation code, and upon clicking the "Start Test" button, the user's information is sent to the backend server for storage. The extension performs a camera and audio check, and initiates image proctoring, sending images to the server every three minutes (configurable). All image and user activity data are stored on the backend server.
 
-An admin panel is provided to view user details (Along with images at particular timestamp).
+An admin panel is provided to view user details (Along with timestamp of user).
 
 </p>
 
@@ -17,7 +15,10 @@ An admin panel is provided to view user details (Along with images at particular
 ## Clone to Local Storage
 
 Open terminal and Clone the extesion using git:
-`bash $ git clone "https://github.com/apoorvdixit88/proctor"`
+
+```bash
+$ git clone "https://github.com/apoorvdixit88/proctor"
+```
 
 ## Install Locally
 
@@ -29,7 +30,7 @@ Open terminal and Clone the extesion using git:
 
 Click the extension that gets appeared on top right corner.
 
-<img width="500px" height  ="700px" src="assets/form.PNG" alt="Recorder" />
+<img width="500px" height  ="600px" src="assets/form.PNG" alt="Recorder" />
 <!-- ![](./assets/form.PNG) -->
 
 <br>
@@ -74,6 +75,8 @@ We can use search email feature to fetch images of a particular user clicked dur
 
 <br>
 
+Now storage needs to be setup!
+
 ## Creating S3 Bucket
 
 1. Setup cloud bucket to store/retrieve photos: [Link](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html)
@@ -91,7 +94,7 @@ Create Mongo Cluster to store User's Data: [Link](https://www.mongodb.com/basics
 
 ![](./assets/mongo.PNG)
 
-## Defining env variable
+## Defining Environment Variables
 
 Enter the following variables in .env after creating bucket and mongo cluster. (.env file present in backend directory)
 
@@ -101,4 +104,4 @@ AWS_ACCESS_KEY = ""<br>
 AWS_SECRET_KEY = ""<br>
 MONGO_URL = ""<br>
 
-The extension will work file once clicked, after specifying storage location all the data can be pushed or retrieved easily.
+The extension will work fine once clicked, after specifying environment variables, all the data can be pushed or retrieved easily.
