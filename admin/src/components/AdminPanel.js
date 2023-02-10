@@ -1,34 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import ImageCard from "./ImageCard";
+import { Header } from "./Header";
+import Table from "./Table";
+import Search from "./Search";
 
 const AdminPanel = () => {
-  const [userData, setUserData] = useState([]);
+  const [userData, setUserData] = useState(null);
+  const [userEmail, setUserEmail] = useState("");
 
-  useEffect(() => {
-    fetch('http://localhost:3001/api/userdata')
-      .then(response => response.json())
-      .then(data => setUserData(data));
-  }, []);
+  const handleSubmit = () => {
+    // console.log(`http://localhost:3001/api/getAll`);
+    fetch(`http://localhost:3001/api/getUser/${userEmail}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setUserData(data);
+        console.log(data);
+      });
+  };
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Test Invitation Code</th>
-        </tr>
-      </thead>
-      <tbody>
-        <h1>inside body</h1>
-        {userData.map(user => (
-          <tr key={user.id}>
-            <td>{user.name}</td>
-            <td>{user.email}</td>
-            <td>{user.testInvitationCode}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <>
+      {/* <h1>working</h1> */}
+      <Header />
+      <Search
+        userEmail={userEmail}
+        setUserEmail={setUserEmail}
+        handleSubmit={handleSubmit}
+      />
+      {userData ? <Table userData={userData} /> : null}
+      {/* <ImageCard/> */}
+    </>
   );
 };
 

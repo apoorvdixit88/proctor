@@ -1,12 +1,22 @@
-#user-form {
+/* #proctoring-form {
     width: 500px;
     margin:  auto;
+    margin-top: 1 rem;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  } */
+  
+  h1 {
+    width: 500px;
+    margin:  auto;
+    margin-top: 20px;
     padding: 20px;
     border: 1px solid lightgray;
     border-radius: 10px;
     background-color: #f2f2f2;
   }
-  
   label {
     display: block;
     margin-bottom: 10px;
@@ -34,12 +44,12 @@
     font-weight: bold;
   }
   
-  #message {
+  /* #message {
     margin-top: 20px;
     text-align: center;
     font-weight: bold;
     color: #4CAF50;
-  }
+  } */
   
 
 
@@ -54,15 +64,17 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
   }
   
   form {
+    border: 1px solid black;
     display: flex;
+    background-color: #f2f2f2;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
+    margin-top: 10px;
   }
   
   label {
@@ -74,9 +86,9 @@ body {
   input[type="number"] {
     padding: 10px;
     font-size: 16px;
-  }
+  } 
   
-  input[type="submit"] {
+  #sub{
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
@@ -87,7 +99,7 @@ body {
   }
   
   #webcam-feed {
-    /* border: 2px solid black; */
+   border: 2px solid black;
     margin-top: 20px;
     width: 640px;
     height: 480px;
