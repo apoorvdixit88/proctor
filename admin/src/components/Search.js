@@ -17,7 +17,7 @@ const Search = ({ userEmail, setUserEmail, handleSubmit }) => {
           aria-describedby="button-addon2"
         />
         <button
-          className="btn fs-5 btn-outline-secondary"
+          className="btn fs-5 btn-outline-success"
           type="button"
           id="button-addon2"
           onClick={handleSubmit}

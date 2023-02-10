@@ -32,6 +32,7 @@ const Table = ({ userData: { name, email, code, images } }) => {
           ))}
         </div>
       </div>
+      <hr className="rounded"></hr>
     </div>
   );
 };

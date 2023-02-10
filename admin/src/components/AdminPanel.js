@@ -3,6 +3,7 @@ import ImageCard from "./ImageCard";
 import { Header } from "./Header";
 import Table from "./Table";
 import Search from "./Search";
+import { AllUsers } from "./AllUsers";
 
 const AdminPanel = () => {
   const [userData, setUserData] = useState(null);
@@ -20,7 +21,6 @@ const AdminPanel = () => {
 
   return (
     <>
-      {/* <h1>working</h1> */}
       <Header />
       <Search
         userEmail={userEmail}
@@ -28,7 +28,9 @@ const AdminPanel = () => {
         handleSubmit={handleSubmit}
       />
       {userData ? <Table userData={userData} /> : null}
-      {/* <ImageCard/> */}
+
+      <h1>all users</h1>
+      <AllUsers />
     </>
   );
 };
