@@ -12,7 +12,7 @@ const Search = ({ userEmail, setUserEmail, handleSubmit }) => {
           className="form-control fs-5"
           value={userEmail}
           onChange={(e) => setUserEmail(e.target.value)}
-          placeholder="user email"
+          placeholder="Enter User email"
           aria-label="Recipient's username"
           aria-describedby="button-addon2"
         />

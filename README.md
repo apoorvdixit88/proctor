@@ -16,7 +16,7 @@ An admin panel is provided to view user details (Along with images at particular
 
 ## Clone to Local Storage
 
-Clone the extesion using git:
+Open terminal and Clone the extesion using git:
 `bash $ git clone "https://github.com/apoorvdixit88/proctor"`
 
 ## Install Locally
@@ -28,7 +28,9 @@ Clone the extesion using git:
 ![](./assets/dev-guide.PNG)
 
 Click the extension that gets appeared on top right corner.
-![](./assets/form.PNG)
+
+<img width="500px" height  ="700px" src="assets/form.PNG" alt="Recorder" />
+<!-- ![](./assets/form.PNG) -->
 
 <br>
 
@@ -56,9 +58,16 @@ $ npm i # install dependencies
 $ npm start # run server for dash board
 ```
 
+Note: React and node should be installed.
+
+### Dashboard
+
 ![](./assets/dashboard.PNG)
 
-We can use seach email feauture to fetch images of a particular user clicked during proctoring session.
+We can use search email feature to fetch images of a particular user clicked during proctoring session.
+
+### User Images
+
 ![](./assets/dashboard_img.PNG)
 
 <!-- dashboard_img.PNG -->
@@ -75,16 +84,16 @@ We can use seach email feauture to fetch images of a particular user clicked dur
 The created bucked will look like!
 ![](./assets/bucket.PNG)
 
-## Creating MongoDB
+## Creating Mongo Cluster
 
 MongoDB will store form data as well all the reference links of all images of a particular user.
 Create Mongo Cluster to store User's Data: [Link](https://www.mongodb.com/basics/clusters/mongodb-cluster-setup)
 
 ![](./assets/mongo.PNG)
 
-## Creating env variable
+## Defining env variable
 
-Enter the following variables in ENV after creating bucket and mongo cluster. (In .env file present in backend)
+Enter the following variables in .env after creating bucket and mongo cluster. (.env file present in backend directory)
 
 AWS_BUCKET_NAME = "" <br>
 AWS_BUCKET_REGION = "" <br>
