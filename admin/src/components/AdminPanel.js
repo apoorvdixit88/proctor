@@ -29,7 +29,7 @@ const AdminPanel = () => {
       />
       {userData ? <Table userData={userData} /> : null}
 
-      <h1>all users</h1>
+      <h1>All User List</h1>
       <AllUsers />
     </>
   );
