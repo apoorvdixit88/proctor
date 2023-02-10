@@ -1,5 +1,6 @@
 # Proctoring Extension
 
+#Readme is in progress, more elaborated readme will be added by 7pm today
 
 #  Overview!
 Chrome Extension for Proctoring!
