@@ -11,7 +11,7 @@ const Table = ({ userData: { name, email, code, images } }) => {
               Name
             </th>
             <th scope="col">Email</th>
-            <th scope="col">Code</th>
+            <th scope="col">Invitation Code</th>
           </tr>
         </thead>
         <tbody>

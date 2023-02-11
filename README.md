@@ -17,7 +17,7 @@ An admin panel is provided to view user details (Along with timestamp of images)
 Open terminal and Clone the extesion using git:
 
 ```bash
-$ git clone "https://github.com/apoorvdixit88/proctor"
+$ git clone https://github.com/apoorvdixit88/proctor
 ```
 
 ## Install Locally
