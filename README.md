@@ -37,7 +37,8 @@ Click the extension that gets appeared on top right corner.
 
 ## Run Locally
 
-Open two terminals for backend and admin dashboard(frontend)
+**Note: React and node should be installed.**
+Open terminals for backend and admin (dashboard)
 
 - For backend:
 
@@ -49,7 +50,7 @@ $ npm i # install dependencies
 $ nodemon app.js #run server for backend
 ```
 
-- For Frontend Admin-Dashboard
+- For frontend Admin-Dashboard
 
 ```bash
 $ cd admin # moving to directory
@@ -58,8 +59,6 @@ $ npm i # install dependencies
 
 $ npm start # run server for dash board
 ```
-
-Note: React and node should be installed.
 
 ### Dashboard
 
@@ -75,7 +74,7 @@ We can use search email feature to fetch images of a particular user clicked dur
 
 <br>
 
-Now storage needs to be setup!
+Now setting up storage !
 
 ## Creating S3 Bucket
 
